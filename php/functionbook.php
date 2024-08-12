@@ -65,3 +65,18 @@ function get_books_by_category($connection, $id){
 
     return $books;
 }
+
+#For getting books by author
+function get_books_by_author($connection, $id){
+    $sql  = "SELECT * FROM books WHERE author_id=?";
+    $stmt = $connection->prepare($sql);
+    $stmt->execute([$id]);
+
+    if ($stmt->rowCount() > 0) {
+        $books = $stmt->fetchAll();
+    }else {
+        $books = 0;
+    }
+
+    return $books;
+}
