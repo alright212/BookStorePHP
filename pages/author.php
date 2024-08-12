@@ -52,7 +52,7 @@ $categories = get_all_categories($connection);
 <div class="container">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.php">Online Book Store</a>
+            <a class="navbar-brand" href="../index.php">Online Book Store</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -64,7 +64,7 @@ $categories = get_all_categories($connection);
                     <li class="nav-item">
                         <a class="nav-link active"
                            aria-current="page"
-                           href="index.php">Store</a>
+                           href="../index.php">Store</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link"
@@ -89,7 +89,7 @@ $categories = get_all_categories($connection);
         </div>
     </nav>
     <h1 class="display-4 p-3 fs-3">
-        <a href="index.php"
+        <a href="../index.php"
            class="nd">
             <img src="img/back-arrow.PNG"
                  width="35">

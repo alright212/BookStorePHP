@@ -29,7 +29,7 @@ if (!isset($_SESSION['user_id']) &&
         <form class="p-5 rounded shadow"
               style="max-width: 30rem; width: 100%"
               method="POST"
-              action="php/authentication/auth.php">
+              action="../php/authentication/auth.php">
 
             <h1 class="text-center display-4 pb-5">LOGIN</h1>
             <?php if (isset($_GET['error'])) { ?>
@@ -60,7 +60,7 @@ if (!isset($_SESSION['user_id']) &&
                     class="btn btn-primary">
                 Login
             </button>
-            <a href="index.php">Store</a>
+            <a href="../index.php">Store</a>
         </form>
     </div>
     </body>

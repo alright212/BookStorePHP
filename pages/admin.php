@@ -56,7 +56,7 @@ if (isset($_SESSION['user_id']) &&
                         <li class="nav-item">
                             <a class="nav-link"
                                aria-current="page"
-                               href="index.php">Store</a>
+                               href="../index.php">Store</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link"
@@ -188,7 +188,7 @@ if (isset($_SESSION['user_id']) &&
                                class="btn btn-warning">
                                 Edit</a>
 
-                            <a href="php/book/delete-book.php?id=<?= $book['id'] ?>"
+                            <a href="../php/book/delete-book.php?id=<?= $book['id'] ?>"
                                class="btn btn-danger">
                                 Delete</a>
                         </td>
@@ -232,7 +232,7 @@ if (isset($_SESSION['user_id']) &&
                                class="btn btn-warning">
                                 Edit</a>
 
-                            <a href="php/category/delete-category.php?id=<?= $category['id'] ?>"
+                            <a href="../php/category/delete-category.php?id=<?= $category['id'] ?>"
                                class="btn btn-danger">
                                 Delete</a>
                         </td>
@@ -276,7 +276,7 @@ if (isset($_SESSION['user_id']) &&
                                class="btn btn-warning">
                                 Edit</a>
 
-                            <a href="php/author/delete-author.php?id=<?= $author['id'] ?>"
+                            <a href="../php/author/delete-author.php?id=<?= $author['id'] ?>"
                                class="btn btn-danger">
                                 Delete</a>
                         </td>
