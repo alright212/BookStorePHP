@@ -5,10 +5,10 @@ if (isset($_POST['email']) &&
     isset($_POST['password'])) {
 
     # Database Connection File
-    include "../db_conn.php";
+    include "../db_connection.php";
 
     # Validation helper function
-    include "func-validation.php";
+    include "validationfunction.php";
 
     /**
     Get data from POST request
