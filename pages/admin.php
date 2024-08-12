@@ -60,15 +60,15 @@ if (isset($_SESSION['user_id']) &&
                         </li>
                         <li class="nav-item">
                             <a class="nav-link"
-                               href="add-book.php">Add Book</a>
+                               href="book/add-book.php">Add Book</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link"
-                               href="add-category.php">Add Category</a>
+                               href="category/add-category.php">Add Category</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link"
-                               href="add-author.php">Add Author</a>
+                               href="author/add-author.php">Add Author</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link"
@@ -272,7 +272,7 @@ if (isset($_SESSION['user_id']) &&
                         <td><?= $k ?></td>
                         <td><?= $author['name'] ?></td>
                         <td>
-                            <a href="edit-author.php?id=<?= $author['id'] ?>"
+                            <a href="author/edit-author.php?id=<?= $author['id'] ?>"
                                class="btn btn-warning">
                                 Edit</a>
 

@@ -50,7 +50,7 @@ $current_category = get_category($connection, $id);
 <div class="container">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../index.php">Online Book Store</a>
+            <a class="navbar-brand" href="../../index.php">Online Book Store</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -62,7 +62,7 @@ $current_category = get_category($connection, $id);
                     <li class="nav-item">
                         <a class="nav-link active"
                            aria-current="page"
-                           href="../index.php">Store</a>
+                           href="../../index.php">Store</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link"
@@ -75,10 +75,10 @@ $current_category = get_category($connection, $id);
                     <li class="nav-item">
                         <?php if (isset($_SESSION['user_id'])) { ?>
                             <a class="nav-link"
-                               href="admin.php">Admin</a>
+                               href="../admin.php">Admin</a>
                         <?php } else { ?>
                             <a class="nav-link"
-                               href="login.php">Login</a>
+                               href="../login.php">Login</a>
                         <?php } ?>
 
                     </li>
@@ -87,7 +87,7 @@ $current_category = get_category($connection, $id);
         </div>
     </nav>
     <h1 class="display-4 p-3 fs-3">
-        <a href="../index.php"
+        <a href="../../index.php"
            class="nd">
             <img src="img/back-arrow.PNG"
                  width="35">
@@ -175,7 +175,7 @@ $current_category = get_category($connection, $id);
                        class="list-group-item list-group-item-action active">Author</a>
                     <?php foreach ($authors as $author) { ?>
 
-                        <a href="author.php?id=<?= $author['id'] ?>"
+                        <a href="../author/author.php?id=<?= $author['id'] ?>"
                            class="list-group-item list-group-item-action">
                             <?= $author['name'] ?></a>
                     <?php }

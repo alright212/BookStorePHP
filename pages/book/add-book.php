@@ -51,7 +51,7 @@ if (isset($_SESSION['user_id']) &&
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="admin.php">Admin</a>
+                <a class="navbar-brand" href="../admin.php">Admin</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -61,7 +61,7 @@ if (isset($_SESSION['user_id']) &&
                         <li class="nav-item">
                             <a class="nav-link"
                                aria-current="page"
-                               href="../index.php">Store</a>
+                               href="../../index.php">Store</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active"
@@ -69,15 +69,15 @@ if (isset($_SESSION['user_id']) &&
                         </li>
                         <li class="nav-item">
                             <a class="nav-link"
-                               href="add-category.php">Add Category</a>
+                               href="../category/add-category.php">Add Category</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link"
-                               href="add-author.php">Add Author</a>
+                               href="../author/add-author.php">Add Author</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link"
-                               href="logout.php">Logout</a>
+                               href="../logout.php">Logout</a>
                         </li>
                     </ul>
                 </div>

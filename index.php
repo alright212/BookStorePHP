@@ -162,7 +162,7 @@ $categories = get_all_categories($connection);
                        class="list-group-item list-group-item-action active">Category</a>
                     <?php foreach ($categories as $category) { ?>
 
-                        <a href="pages/category.php?id=<?= $category['id'] ?>"
+                        <a href="pages/category/category.php?id=<?= $category['id'] ?>"
                            class="list-group-item list-group-item-action">
                             <?= $category['name'] ?></a>
                     <?php }
@@ -178,7 +178,7 @@ $categories = get_all_categories($connection);
                        class="list-group-item list-group-item-action active">Author</a>
                     <?php foreach ($authors as $author) { ?>
 
-                        <a href="pages/author.php?id=<?= $author['id'] ?>"
+                        <a href="pages/author/author.php?id=<?= $author['id'] ?>"
                            class="list-group-item list-group-item-action">
                             <?= $author['name'] ?></a>
                     <?php }
