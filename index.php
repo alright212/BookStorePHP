@@ -5,15 +5,15 @@ session_start();
 include "db_connection.php";
 
 # Book helper function
-include "php/func-book.php";
+include "php/book-function.php";
 $books = get_all_the_books($connection);
 
 # author helper function
-include "php/func-author.php";
+include "php/author-function.php";
 $authors = get_all_author($connection);
 
 # Category helper function
-include "php/func-category.php";
+include "php/category-function.php";
 $categories = get_all_categories($connection);
 
 ?>

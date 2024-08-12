@@ -5,14 +5,14 @@ if (isset($_POST['email']) &&
     isset($_POST['password'])) {
 
     # Database Connection File
-    include "../db_connection.php";
+    include "../../db_connection.php";
 
     # Validation helper function
-    include "validationfunction.php";
+    include "../miscellaneous/validationfunction.php";
 
     /**
-    Get data from POST request
-    and store them in var
+     * Get data from POST request
+     * and store them in var
      **/
 
     $email = $_POST['email'];
@@ -31,7 +31,8 @@ if (isset($_POST['email']) &&
     is_empty($password, $text, $location, $ms, "");
 
     # search for the email
-    $sql = "SELECT * FROM admin WHERE email=?";
+    $sql = "SELECT * FROM admin 
+            WHERE email=?";
     $stmt = $connection->prepare($sql);
     $stmt->execute([$email]);
 
@@ -47,23 +48,23 @@ if (isset($_POST['email']) &&
                 $_SESSION['user_id'] = $user_id;
                 $_SESSION['user_email'] = $user_email;
                 header("Location: ../admin.php");
-            }else {
+            } else {
                 # Error message
                 $em = "Incorrect User name or password";
                 header("Location: ../login.php?error=$em");
             }
-        }else {
+        } else {
             # Error message
             $em = "Incorrect User name or password";
             header("Location: ../login.php?error=$em");
         }
-    }else{
+    } else {
         # Error message
         $em = "Incorrect User name or password";
         header("Location: ../login.php?error=$em");
     }
 
-}else {
+} else {
     # Redirect to "../login.php"
     header("Location: ../login.php");
 }
