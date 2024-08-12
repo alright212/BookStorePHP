@@ -6,7 +6,7 @@ include "db_connection.php";
 
 # Book helper function
 include "php/func-book.php";
-$books = get_all_books($connection);
+$books = get_all_the_books($connection);
 
 # author helper function
 include "php/func-author.php";
