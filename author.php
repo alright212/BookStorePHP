@@ -1,13 +1,13 @@
 <?php
 session_start();
 
-# If not category ID is set
+# If not author ID is set
 if (!isset($_GET['id'])) {
     header("Location: index.php");
     exit;
 }
 
-# Get category ID from GET request
+# Get author ID from GET request
 $id = $_GET['id'];
 
 # Database Connection File
@@ -15,16 +15,18 @@ include "db_connection.php";
 
 # Book helper function
 include "php/functionbook.php";
-$books = get_books_by_category($connection, $id);
+$books = get_books_by_author($connection, $id);
 
 # author helper function
 include "php/functionauthor.php";
 $authors = get_all_author($connection);
+$current_author = get_author($connection, $id);
+
 
 # Category helper function
 include "php/categoryfunction.php";
 $categories = get_all_categories($connection);
-$current_category = get_category($connection, $id);
+
 
 ?>
 <!DOCTYPE html>
@@ -32,7 +34,7 @@ $current_category = get_category($connection, $id);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $current_category['name'] ?></title>
+    <title><?= $current_author['name'] ?></title>
 
     <!-- bootstrap 5 CDN-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -92,7 +94,7 @@ $current_category = get_category($connection, $id);
             <img src="img/back-arrow.PNG"
                  width="35">
         </a>
-        <?= $current_category['name'] ?>
+        <?= $current_author['name'] ?>
     </h1>
     <div class="d-flex pt-3">
         <?php if ($books == 0) { ?>
